@@ -1,56 +1,74 @@
-⚙️ Como rodar o projeto
-Pré-requisitos
-Python 3.8+ (Recomendado 3.10+)
+<h1 align="center"> 🚀 Meu Backend - API com FastAPI & JWT </h1>
 
-Passo a passo
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python">
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/JWT-Security-black?style=flat&logo=json-web-tokens" alt="JWT">
+</p>
+
+<br>
+
+> 💡 **Sobre o projeto:** Um backend robusto e modularizado construído em Python, focado em segurança e alta performance com autenticação via tokens JWT.
+
+---
+
+## 🎯 Funcionalidades
+
+- 🔒 **Autenticação Segura:** Geração e validação de tokens JWT.
+- ⚡ **Alta Performance:** Construído com FastAPI e Uvicorn.
+- 🗂️ **Modularidade:** Código organizado por responsabilidades (rotas, modelos, schemas).
+- 📖 **Documentação Automática:** Swagger UI integrado nativamente.
+
+## 📁 Arquitetura do Projeto
+
+```text
+Meu-backend/
+├── main.py             # Ponto de entrada da API
+├── auth.py             # Lógica de autenticação e tokens JWT
+├── database.py         # Conexão e configuração do banco de dados
+├── models.py           # Modelos de banco de dados
+├── schemas.py          # Schemas do Pydantic (validação de dados)
+├── routers.py          # Endpoints da aplicação
+└── requeriments.txt    # Dependências do projeto
+
+
+🚀 Como Executar
+1️⃣ Pré-requisitos
+Certifique-se de ter o Python 3.8+ instalado na sua máquina.
+
+2️⃣ Passo a passo
+Clone o repositório e acesse a pasta:
+
 Bash
-# 1. Clone o repositório
 git clone [https://github.com/GuilhermeStyvem/Meu-backend.git](https://github.com/GuilhermeStyvem/Meu-backend.git)
 cd Meu-backend
+Crie e ative o ambiente virtual:
 
-# 2. Crie e ative um ambiente virtual
+Bash
+# No Windows
 python -m venv venv
-source venv/bin/activate      # Linux/Mac
-venv\Scripts\activate         # Windows
+venv\Scripts\activate
 
-# 3. Instale as dependências
+# No Linux/Mac
+python -m venv venv
+source venv/bin/activate
+Instale as dependências:
+
+Bash
 pip install -r requeriments.txt
+Inicie o servidor local:
 
-# 4. Rode a API
+Bash
 uvicorn main:app --reload
-Após iniciar, a API estará rodando localmente em http://127.0.0.1:8000.
-Você pode testar os endpoints acessando a documentação interativa (Swagger UI) gerada automaticamente pelo FastAPI em:
+3️⃣ Testando a API
+Com o servidor rodando, acesse a documentação interativa pelo seu navegador:
 👉 http://127.0.0.1:8000/docs
 
-🔐 Autenticação (JWT)
-O sistema conta com um fluxo de autenticação onde:
+🛠️ Stack de Tecnologias
+FastAPI - Framework web moderno e rápido.
 
-O usuário envia credenciais válidas.
+Pydantic - Validação estrutural de dados.
 
-A API retorna um Token JWT.
+Uvicorn - Servidor ASGI ultrarrápido.
 
-O token deve ser enviado nos cabeçalhos (Authorization: Bearer <token>) para acessar rotas protegidas.
-
-🛠️ Tecnologias utilizadas
-FastAPI — Framework web moderno e rápido para construção de APIs em Python
-
-JWT (JSON Web Tokens) — Padrão de mercado para autenticação segura
-
-Pydantic — Validação e tipagem de dados (via schemas.py)
-
-Uvicorn — Servidor ASGI ultrarrápido para rodar a aplicação
-"""
-
-Escrevendo no arquivo .txt
-file_path = "README_Meu_Backend.txt"
-with open(file_path, "w", encoding="utf-8") as file:
-file.write(content)
-
-print(f"Arquivo gerado: {file_path}")
-
-Aqui está o conteúdo do README em um ficheiro de texto, conforme pediste!
-
-O teu ficheiro TXT está pronto
-[file-tag: code-generated-file-0-1783215273500599518]
-
-Se precisares de mais alguma alteração ou ajuste, é só avisar.
+PyJWT - Padrão de mercado para tokens.
